@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "26795794941",
+    "project_id": "corona-584a9",
+    "storage_bucket": "corona-584a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26795794941:android:e35d8d3cbb0d455ca2b994",
+        "android_client_info": {
+          "package_name": "com.nessy.corona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26795794941-4am3sca05b1qv80g601q6dulqds26gik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEWQwzgHfamvdVrWUFrboYA3NaCw77ghk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26795794941-4am3sca05b1qv80g601q6dulqds26gik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

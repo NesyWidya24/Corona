@@ -1,0 +1,82 @@
+package com.nessy.corona;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import androidx.fragment.app.FragmentManager;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.Window;
+import androidx.fragment.app.Fragment;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    private TextView titleTv;
+
+    private Fragment homeFragment, statsFragment;
+    private Fragment activeFragment;
+    private FragmentManager fragmentManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        titleTv = findViewById(R.id.titleTv);
+        ImageButton refreshBtn = findViewById(R.id.refreshBtn);
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+
+
+        initFragment();
+
+        refreshBtn.setOnClickListener(view -> {
+            homeFragment.onResume();
+            statsFragment.onResume();
+        });
+
+        navView.setOnNavigationItemSelectedListener(this);
+    }
+
+    private void initFragment() {
+        homeFragment = new HomeFragment();
+        statsFragment = new StatsFragment();
+
+        fragmentManager = getSupportFragmentManager();
+        activeFragment = homeFragment;
+
+        fragmentManager.beginTransaction()
+                .add(R.id.frame, homeFragment, "homeFragment")
+                .commit();
+        fragmentManager.beginTransaction()
+                .add(R.id.frame, statsFragment, "statsFragment")
+                .hide(statsFragment)
+                .commit();
+    }
+
+    private void loadHomeFragment(){
+        fragmentManager.beginTransaction().hide(activeFragment).show(homeFragment).commit();
+        activeFragment = homeFragment;
+    }
+
+    private void loadStatsFragment(){
+        fragmentManager.beginTransaction().hide(activeFragment).show(statsFragment).commit();
+        activeFragment = statsFragment;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                loadHomeFragment();
+                return true;
+            case R.id.nav_stats:
+                loadStatsFragment();
+                return true;
+        }
+        return false;
+    }
+}

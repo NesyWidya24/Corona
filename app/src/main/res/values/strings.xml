@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Corona</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="stats">Stats</string>
+    <string name="covidStat">COVID19 STATS</string>
+    <string name="info">This data changes rapidly and might not reflect some cases still being reported. You may refresh records periodically to reflect changes</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="strip">-</string>
+    <string name="new_cases">New Cases</string>
+    <string name="total_deceased">Total Deceased</string>
+    <string name="new_deaths">New Deaths</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="newRecovered">New Recovered</string>
+    <string name="country_name">Country Name</string>
+    <string name="cases">Cases</string>
+    <string name="todayCases">Total Cases</string>
+    <string name="deaths">Deaths</string>
+    <string name="todayDeaths">Today Deaths</string>
+    <string name="recovered">Recovered</string>
+    <string name="todayRecovered">Today Recovered</string>
+    <string name="search">Search</string>
+    <string name="prevention">Prevention</string>
+    <string name="prevention1">Avoid close contact</string>
+    <string name="prevention2">Clean your hands often</string>
+    <string name="prevention3">Wear a face mask</string>
+    <string name="location">Location</string>
+    <string name="covid_19_global">COVID-19 Global</string>
+    <string name="desc_prevention1">If you\'re walking or talking to people then keep a safe distance of three feet when it is urgent</string>
+    <string name="desc_prevention2">After returning to home make sure that you have washed your hands first. Don\'t touch your face before cleaning</string>
+    <string name="desc_prevention3">Wearing a mask or face covering reduces the risk of spreading COVID-19 and helps protect us all</string>
+</resources>
